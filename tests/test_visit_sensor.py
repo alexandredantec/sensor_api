@@ -9,7 +9,7 @@ class TestVisitSensor(unittest.TestCase):
         for test_day in range(11, 17):
             with self.subTest(i=test_day):
                 visit_sensor = VisitSensor(avg_visit=1200, std_visit=300)
-                visit_count = visit_sensor.simulate_visit_count(date(year=2023, month=9, test_day))
+                visit_count = visit_sensor.simulate_visit_count(date(year=2023, month=9, day=test_day))
                 self.assertFalse(visit_count == -1)
 
     def test_sunday_closed(self):
